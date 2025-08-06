@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/rfsaldanha/riqar/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rfsaldanha/riqar/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Computes air pollutant IQAr index following [CONAMA/MMA
