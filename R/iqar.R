@@ -34,6 +34,7 @@ iqar <- function(
   checkmate::assert_numeric(x = co)
   checkmate::assert_numeric(x = no2)
   checkmate::assert_numeric(x = so2)
+  checkmate::assert_logical(x = label)
 
   res <- max(
     iqar_pol(x = pm10, pol = "pm10"),

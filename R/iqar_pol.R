@@ -8,18 +8,21 @@
 #'
 #' @param x numeric. Pollutants concentration. See details bellow for the correct unit.
 #' @param pol character. Pollutant abbreviation: pm10, pm2.5, o3, co, no2, so2.
+#' @param label logical. If `FALSE`, the function will return the IQAr value, if `TRUE` the function will return the IQAr label. Defaults to `FALSE`.
 #'
 #' @returns numeric. Pollutant specific IQAr index
 #'
 #' @export
 #' @examples
 #' iqar_pol(x = 10, pol = "pm2.5")
-iqar_pol <- function(x, pol = "pm2.5") {
+#' iqar_pol(x = 10, pol = "pm2.5", label = TRUE)
+iqar_pol <- function(x, pol = "pm2.5", label = FALSE) {
   checkmate::assert_numeric(x = x)
   checkmate::assert_choice(
     x = pol,
     choices = c("pm10", "pm2.5", "o3", "co", "no2", "so2")
   )
+  checkmate::assert_logical(x = label)
 
   lim <- NULL
   if (pol == "pm10") {
@@ -80,6 +83,17 @@ iqar_pol <- function(x, pol = "pm2.5") {
 
   res <- lim[1] + ((lim[2] - lim[1]) / (lim[4] - lim[3])) * (x - lim[3])
   res <- round(x = res, digits = 0)
+
+  if (label == TRUE) {
+    res <- dplyr::case_when(
+      res >= 0 & res <= 40 ~ "N1 - Boa",
+      res >= 41 & res <= 80 ~ "N2 - Moderada",
+      res >= 81 & res <= 120 ~ "N3 - Ruim",
+      res >= 121 & res <= 200 ~ "N4 - Muito Ruim",
+      res >= 201 & res <= 400 ~ "N5 - P\u00e9ssima",
+      .default = "Sem classifica\u00e7\u00e3o."
+    )
+  }
 
   return(res)
 }

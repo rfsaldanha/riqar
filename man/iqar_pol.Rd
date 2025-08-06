@@ -4,12 +4,14 @@
 \alias{iqar_pol}
 \title{Compute specific IQAr index to several air pollutants}
 \usage{
-iqar_pol(x, pol = "pm2.5")
+iqar_pol(x, pol = "pm2.5", label = FALSE)
 }
 \arguments{
 \item{x}{numeric. Pollutants concentration. See details bellow for the correct unit.}
 
 \item{pol}{character. Pollutant abbreviation: pm10, pm2.5, o3, co, no2, so2.}
+
+\item{label}{logical. If \code{FALSE}, the function will return the IQAr value, if \code{TRUE} the function will return the IQAr label. Defaults to \code{FALSE}.}
 }
 \value{
 numeric. Pollutant specific IQAr index
@@ -22,4 +24,5 @@ Units: pm10: mug/m3, pm2.5: mug/m3, o3: mug/m3, co: PPM, no2: mug/m3, so2: mug/m
 }
 \examples{
 iqar_pol(x = 10, pol = "pm2.5")
+iqar_pol(x = 10, pol = "pm2.5", label = TRUE)
 }
