@@ -52,8 +52,8 @@ iqar <- function(
       res >= 41 & res <= 80 ~ "N2 - Moderada",
       res >= 81 & res <= 120 ~ "N3 - Ruim",
       res >= 121 & res <= 200 ~ "N4 - Muito Ruim",
-      res >= 201 & res <= 400 ~ "N5 - Péssima",
-      .default = "Sem classificação."
+      res >= 201 & res <= 400 ~ "N5 - P\u00e9ssima",
+      .default = "Sem classifica\u00e7\u00e3o."
     )
   }
 

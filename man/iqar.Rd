@@ -40,4 +40,5 @@ Units: mp10: mug/m3, mp2.5: mug/m3, o3: mug/m3, co: PPM, no2: mug/m3, so2: mug/m
 }
 \examples{
 iqar(pm10 = 50, pm2.5 = 80, o3 = 60)
+iqar(pm10 = 50, pm2.5 = 80, o3 = 60, label = TRUE)
 }

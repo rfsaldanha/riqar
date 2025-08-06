@@ -1,0 +1,10 @@
+url: https://rfsaldanha.github.io/riqar/
+template:
+  bootstrap: 5
+  params:
+    ganalytics: G-2M7VLSRDCB
+
+navbar:
+  structure:
+    right: [github]
+
