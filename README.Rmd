@@ -1,10 +1,21 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # riqar
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 Computes air pollutant IQAr index following CONAMA/MMA specification.
@@ -20,25 +31,20 @@ pak::pak("rfsaldanha/riqar")
 
 ## Example
 
-You can use the package to compute the IQAr index for a specific air
-pollutant.
+You can use the package to compute the IQAr index for a specific air pollutant.
 
-``` r
+```{r example}
 library(riqar)
 
 iqar_pol(x = 50, pol = "pm2.5")
-#> [1] 79
 ```
 
-Or compute the general IQAr index using several air pollutants
-concentrations.
+Or compute the general IQAr index using several air pollutants concentrations.
 
-``` r
+```{r}
 iqar(pm10 = 50, pm2.5 = 80, o3 = 60)
-#> [1] 127
 ```
 
-``` r
+```{r}
 iqar(pm10 = 50, pm2.5 = 80, o3 = 60, label = TRUE)
-#> [1] "N4 - Muito Ruim"
 ```
