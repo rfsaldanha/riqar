@@ -7,7 +7,8 @@
 
 <!-- badges: end -->
 
-Computes air pollutant IQAr index following CONAMA/MMA specification.
+Computes air pollutant IQAr index following [CONAMA/MMA
+specification](https://www.gov.br/mma/pt-br/assuntos/meio-ambiente-urbano-recursos-hidricos-qualidade-ambiental/qualidade-do-ar/indice-de-qualidade-do-ar-iqar).
 
 ## Installation
 
