@@ -15,17 +15,17 @@ iqar(
 )
 }
 \arguments{
-\item{pm10}{numeric. Pollutant concentration. See details bellow for the correct unit.}
+\item{pm10}{numeric. Particulate matter \eqn{PM_{10}} concentration, \eqn{\mu g/m^{3}}.}
 
-\item{pm2.5}{numeric. Pollutant concentration. See details bellow for the correct unit.}
+\item{pm2.5}{numeric. Particulate matter \eqn{PM_{2.5}} concentration, \eqn{\mu g/m^{3}}.}
 
-\item{o3}{numeric. Pollutant concentration. See details bellow for the correct unit.}
+\item{o3}{numeric. Ozone \eqn{O_3} concentration, \eqn{\mu g/m^{3}}.}
 
-\item{co}{numeric. Pollutant concentration. See details bellow for the correct unit.}
+\item{co}{numeric. Carbon monoxide \eqn{CO} concentration, \eqn{PPM}.}
 
-\item{no2}{numeric. Pollutant concentration. See details bellow for the correct unit.}
+\item{no2}{numeric. Nitrogen dioxide \eqn{NO_2} concentration, \eqn{\mu g/m^{3}}.}
 
-\item{so2}{numeric. Pollutant concentration. See details bellow for the correct unit.}
+\item{so2}{numeric. Sulfur dioxide \eqn{SO_2} concentration, \eqn{\mu g/m^{3}}.}
 
 \item{label}{logical. If \code{FALSE}, the function will return the IQAr value, if \code{TRUE} the function will return the IQAr label. Defaults to \code{FALSE}.}
 }
@@ -34,9 +34,6 @@ numeric. IQAr index value or classification.
 }
 \description{
 This function computes the IQAr index considering several air pollutants using the Brazilian CONAMA/MMA specification.
-}
-\details{
-Units: mp10: mug/m3, mp2.5: mug/m3, o3: mug/m3, co: PPM, no2: mug/m3, so2: mug/m3
 }
 \examples{
 iqar(pm10 = 50, pm2.5 = 80, o3 = 60)

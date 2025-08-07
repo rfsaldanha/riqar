@@ -20,7 +20,7 @@ numeric. Pollutant specific IQAr index
 This function computes specific IQAr index to several air pollutants using the Brazilian CONAMA/MMA specification.
 }
 \details{
-Units: pm10: mug/m3, pm2.5: mug/m3, o3: mug/m3, co: PPM, no2: mug/m3, so2: mug/m3
+Units: \eqn{PM_{10}}: \eqn{\mu g/m^{3}}, \eqn{PM_{2.5}}: \eqn{\mu g/m^{3}}, \eqn{O_3}: \eqn{\mu g/m^{3}}, \eqn{CO}: \eqn{PPM}, \eqn{NO_2}: \eqn{\mu g/m^{3}}, \eqn{SO_2}: \eqn{\mu g/m^{3}}
 }
 \examples{
 iqar_pol(x = 10, pol = "pm2.5")

@@ -2,15 +2,12 @@
 #'
 #' This function computes the IQAr index considering several air pollutants using the Brazilian CONAMA/MMA specification.
 #'
-#' @details
-#' Units: mp10: mug/m3, mp2.5: mug/m3, o3: mug/m3, co: PPM, no2: mug/m3, so2: mug/m3
-#'
-#' @param pm10 numeric. Pollutant concentration. See details bellow for the correct unit.
-#' @param pm2.5 numeric. Pollutant concentration. See details bellow for the correct unit.
-#' @param o3 numeric. Pollutant concentration. See details bellow for the correct unit.
-#' @param co numeric. Pollutant concentration. See details bellow for the correct unit.
-#' @param no2 numeric. Pollutant concentration. See details bellow for the correct unit.
-#' @param so2 numeric. Pollutant concentration. See details bellow for the correct unit.
+#' @param pm10 numeric. Particulate matter \eqn{PM_{10}} concentration, \eqn{\mu g/m^{3}}.
+#' @param pm2.5 numeric. Particulate matter \eqn{PM_{2.5}} concentration, \eqn{\mu g/m^{3}}.
+#' @param o3 numeric. Ozone \eqn{O_3} concentration, \eqn{\mu g/m^{3}}.
+#' @param co numeric. Carbon monoxide \eqn{CO} concentration, \eqn{PPM}.
+#' @param no2 numeric. Nitrogen dioxide \eqn{NO_2} concentration, \eqn{\mu g/m^{3}}.
+#' @param so2 numeric. Sulfur dioxide \eqn{SO_2} concentration, \eqn{\mu g/m^{3}}.
 #' @param label logical. If `FALSE`, the function will return the IQAr value, if `TRUE` the function will return the IQAr label. Defaults to `FALSE`.
 #'
 #' @returns numeric. IQAr index value or classification.
